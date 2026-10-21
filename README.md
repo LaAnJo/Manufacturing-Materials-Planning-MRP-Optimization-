@@ -75,4 +75,4 @@ Manufacturing_Materials_MRP_Optimization/
 
 ## Attribution
 
-Yeh, I. (1998). *Concrete Compressive Strength* [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5PK67 . Dataset licensed CC BY 4.0; `concrete.csv` preserves the ingredient data under the user's supplied column labels. See `LICENSE_NOTE.md` for license information. The synthetic scenario and original project code are separate from the source measurements.
+Yeh, I. (1998). *Concrete Compressive Strength* [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5PK67 . Dataset licensed CC BY 4.0; `concrete.csv` preserves the ingredient data under the user's supplied column labels. 
