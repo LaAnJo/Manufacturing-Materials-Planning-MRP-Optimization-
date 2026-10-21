@@ -1,0 +1,7 @@
+{
+  "name": "MRP Materials Control Tower",
+  "dataColors": ["#168A92", "#F4AA44", "#EB7486", "#5B8BDB", "#81B781", "#9B78C9", "#688D9C"],
+  "background": "#F3F6FB",
+  "foreground": "#16344B",
+  "tableAccent": "#168A92"
+}

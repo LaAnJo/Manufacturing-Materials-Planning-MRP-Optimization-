@@ -1,0 +1,34 @@
+// Create each measure separately using Modeling -> New measure.
+// CSV names MUST exactly match the tables you import and rename in Power BI.
+
+Production Orders = DISTINCTCOUNT('production_orders'[order_id])
+
+Planned Volume m3 = SUM('production_orders'[planned_volume_m3])
+
+Material Demand Tonnes = DIVIDE(SUM('weekly_mrp'[gross_requirement_kg]), 1000)
+
+Proposed Purchase Value USD = SUM('purchase_recommendations'[extended_cost_usd])
+
+Proposed PO Lines = DISTINCTCOUNT('purchase_recommendations'[po_recommendation_id])
+
+Late Release Lines = SUM('purchase_recommendations'[late_release_flag])
+
+Baseline Shortage Material Weeks = SUM('weekly_mrp'[baseline_shortage_flag])
+
+Lead Feasible Shortage Material Weeks = SUM('weekly_mrp'[feasible_shortage_flag])
+
+Feasible Order Rate = DIVIDE([Proposed PO Lines] - [Late Release Lines], [Proposed PO Lines], 0)
+
+Planned Receipts Tonnes = DIVIDE(SUM('weekly_mrp'[planned_receipt_kg]),1000)
+
+-- BACKLOG: safe in a visual with week_start on the axis (one week in filter context).
+-- Do NOT sum across week_start; cards can use selected last week via MAX.
+Feasible Backlog At Latest Week Tonnes =
+VAR LatestWk = MAX('weeks'[week_index])
+RETURN DIVIDE(CALCULATE(SUM('weekly_mrp'[feasible_backlog_kg]), 'weekly_mrp'[week_index] = LatestWk), 1000)
+
+Baseline Backlog At Latest Week Tonnes =
+VAR LatestWk = MAX('weeks'[week_index])
+RETURN DIVIDE(CALCULATE(SUM('weekly_mrp'[baseline_backlog_kg]), 'weekly_mrp'[week_index] = LatestWk), 1000)
+
+Number Of Materials = DISTINCTCOUNT('materials'[material_id])

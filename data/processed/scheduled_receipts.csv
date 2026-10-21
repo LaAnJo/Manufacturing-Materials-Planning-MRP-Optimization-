@@ -1,0 +1,8 @@
+receipt_id,material_id,week_index,week_start,scheduled_receipt_kg,receipt_source
+SR-CEMENT-1,cement,1,2026-11-09,36625.5200,Simulated existing open PO
+SR-SLAG-2,slag,2,2026-11-16,21013.1300,Simulated existing open PO
+SR-ASH-1,ash,1,2026-11-09,0.0000,Simulated existing open PO
+SR-WATER-1,water,1,2026-11-09,10416.5300,Simulated existing open PO
+SR-SUPERPLASTIC-2,superplastic,2,2026-11-16,176.5600,Simulated existing open PO
+SR-COARSEAGG-1,coarseagg,1,2026-11-09,131730.8000,Simulated existing open PO
+SR-FINEAGG-2,fineagg,2,2026-11-16,118848.7300,Simulated existing open PO

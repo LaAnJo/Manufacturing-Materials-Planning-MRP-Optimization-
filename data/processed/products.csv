@@ -1,0 +1,5 @@
+product_id,product_name,target_strength_mpa,observed_28d_strength_mpa,source_test_rows,material_cost_usd_m3,recipe_status
+MX25,Illustrative 25 MPa mix,25,27.8700,1,89.8200,Research example; not certified for structural use
+MX35,Illustrative 35 MPa mix,35,40.8600,1,93.3900,Research example; not certified for structural use
+MX45,Illustrative 45 MPa mix,45,47.8100,1,101.1400,Research example; not certified for structural use
+MX55,Illustrative 55 MPa mix,55,57.2200,1,124.0200,Research example; not certified for structural use

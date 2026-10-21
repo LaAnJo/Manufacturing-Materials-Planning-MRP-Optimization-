@@ -1,0 +1,8 @@
+material_id,material_name,primary_supplier,lead_time_weeks,moq_kg,order_multiple_kg,unit_cost_usd_per_kg,safety_stock_kg,lead_time_source,price_source
+cement,Portland cement,KilnWorks Materials,2,12000,4000,0.1600,20675.7000,Simulated,Simulated
+slag,Ground blast furnace slag,GreenBind Minerals,3,8000,2000,0.0920,13619.6200,Simulated,Simulated
+ash,Fly ash,EcoAsh Supply,2,5000,1000,0.0830,0.0000,Simulated,Simulated
+water,Mixing water,Plant Utility,0,5000,1000,0.0040,18228.9200,Simulated,Simulated
+superplastic,Superplasticizer,PolyMix Chemicals,3,500,100,2.3500,99.6700,Simulated,Simulated
+coarseagg,Coarse aggregate,Rockline Aggregates,1,30000,10000,0.0270,79492.7300,Simulated,Simulated
+fineagg,Fine aggregate,Sandway Supply,1,30000,10000,0.0290,63995.4700,Simulated,Simulated

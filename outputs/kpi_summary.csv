@@ -1,0 +1,2 @@
+source_rows,source_28_day_rows,product_recipes,production_orders,planning_weeks,planned_concrete_volume_m3,material_requirement_tonnes,planned_purchase_orders,planned_purchase_value_usd,late_release_recommendations,baseline_shortage_material_weeks,lead_feasible_shortage_material_weeks,final_baseline_backlog_tonnes,final_feasible_backlog_tonnes,as_of,planning_start
+1030,425,4,144,12,2977.3000,6723.8000,67,275391.0000,5,70,4,5891.6000,0.0000,2026-10-21,2026-11-02
