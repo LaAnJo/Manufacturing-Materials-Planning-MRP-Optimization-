@@ -2,10 +2,6 @@
 
 **Python · SQL · Excel · Power BI · Materials Requirements Planning (MRP)**
 
-> **Portfolio simulation — not a production ERP system.** The uploaded `concrete.csv` supplies real experimental concrete mix ingredient quantities and strength measurements. **ALL** production work orders, supplier identities, stock levels, incoming receipts, lead times, purchase quantities, prices and procurement results are synthetic and reproducible. Mixes are demonstrations, not certified structural concrete recipes.
-
-![Power BI-inspired MRP control tower preview](charts/powerbi_dashboard_preview.png)
-
 ## Business problem
 
 Given upcoming concrete manufacturing orders and a bill of materials (BOM), what raw materials will be needed each week? How can purchasing recommend appropriately sized material receipts while protecting safety stock and identifying orders that cannot meet the required dates under standard supplier lead times?
@@ -27,8 +23,6 @@ This project addresses **time-phased gross requirements**, BOM explosion, openin
 | Purchase lines requiring lead-time review | **5** | Requested release before as-of date |
 | Baseline shortage material-weeks | **70** | Without new purchase recommendations |
 | Lead-feasible shortage material-weeks | **4** | After shifting delayed deliveries to first feasible week |
-
-**Caution:** Material-week alerts are not proven factory stoppages or missed work orders. Baseline/feasible backlogs are **stock balances at a point in time**, and must not be summed over weeks. A decrease in simulated shortage alerts is not an independently validated production improvement.
 
 ## How the input dataset is used
 
@@ -78,33 +72,6 @@ Manufacturing_Materials_MRP_Optimization/
 ├── src/create_workbook.py
 └── tests/test_pipeline.py
 ```
-
-## Quick start (Windows VS Code terminal)
-
-```powershell
-py -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe -m src.pipeline
-.\.venv\Scripts\python.exe -m pytest -q
-.\.venv\Scripts\python.exe -m src.create_dashboard
-.\.venv\Scripts\python.exe -m streamlit run app.py
-```
-
-The Streamlit command runs a full interactive materials control tower in your browser. For **zero-install viewing**, double-click `charts/interactive_mrp_dashboard.html` — charts contain bundled JS, so the file works offline. To explore SQL, open `mrp_analytics.sqlite` in your favorite SQLite browser and run `sql/01_analytics.sql` queries.
-
-The Excel workbook is included and ready to open. Regenerating it via `src/create_workbook.py` requires the specialized `artifact_tool` Python environment and is optional; the core pipeline, HTML dashboard, SQLite results, and tests use the installable packages above.
-
-## Power BI report
-
-**Power BI assets are included, but not a native PBIX file.** A genuine `.pbix` must be assembled in Power BI Desktop on Windows. The folder `powerbi/` includes the prepared import data, star-schema relationships, DAX formulas, page-by-page layout, and color theme. The dashboard preview in `charts/` is a rendered design reference, not a screenshot of a native PBIX report.
-
-Follow [POWER_BI_BUILD_GUIDE.md](powerbi/POWER_BI_BUILD_GUIDE.md), then save the result as `reports/Manufacturing_Materials_MRP_Optimization.pbix` locally in Power BI Desktop.
-
-## What the project demonstrates on a resume
-
-> Built a reproducible materials requirements planning (MRP) simulation using observed concrete mix ingredient profiles and synthetic production orders, inventory and supplier lead times; implemented time-phased BOM explosion, lot-sized purchasing, lead-time feasibility checks and material-shortage dashboards with Python, SQL, Excel and Power BI-ready datasets.
-
-Do not represent hypothetical savings or synthetic improvements as actual operations outcomes.
 
 ## Attribution
 
